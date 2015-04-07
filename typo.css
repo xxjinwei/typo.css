@@ -56,6 +56,12 @@ input::-moz-focus-inner{
   border:0;
 }
 
+/*reset textarea for IE: 1.去掉默认滚动条 2.统一对齐方式*/
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
 /* 去掉各Table cell 的边距并让其边重合 */
 table{
   border-collapse:collapse;
@@ -153,6 +159,9 @@ sub{
 
 /* 让链接在 hover 状态下显示下划线 */
 a{ color:#1abc9c; }
+a:active, a:hover {
+  outline: 0;
+}
 a:hover{ text-decoration:underline; }
 
 .typo a{ border-bottom:1px solid #1abc9c; }
@@ -359,4 +368,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Responsive images */
-.typo img{ max-width: 100%; }
+.typo-img,
+.typo img{
+  max-width: 100%; 
+  height: auto;
+  display: block;
+}
